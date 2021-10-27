@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Space13</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="t2i">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="main.css" rel="stylesheet">
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="java.js"></script>
+    <meta name="theme-color" content="#7952b3">
+  </head>
+
+
+  <body>
+
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand_head">
+          <a href="#!"><img src="./img/logo.png" style="max-height: 70px;" class="img-fluid rounded-start" alt="..."></a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./chisiamo.html">Chi siamo</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <article>
+      <h1 class="text-center mt-4 mb-4">Ecco tutte le nostre risorse:</h1>
+      <a class="btn btn-secondary float-start" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" id="btn_filtri">
+        Filtri
+      </a>
+
+      <div id="btnChangeView">
+        <div class="btn btn-light float-end" id="v_griglia">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-all" viewBox="0 0 16 16">
+            <path d="M0 0h16v16H0V0zm1 1v6.5h6.5V1H1zm7.5 0v6.5H15V1H8.5zM15 8.5H8.5V15H15V8.5zM7.5 15V8.5H1V15h6.5z"/>
+          </svg>
+        </div>
+
+        <div class="btn btn-light float-end nonAttivo" id="v_righe">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-distribute-vertical" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5zm0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5z"/>
+            <path d="M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7z"/>
+          </svg>
+        </div>
+      </div>
+
+
+
+      <!-- Inizio filtri barra laterale -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtri</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+          <!-- PALESTRE DIGITALI -->
+          <div class="accordion" id="PalDig_col">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Palestre Digitali
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#PalDig_col">
+                <div class="accordion-body">
+                  <div class="container rounded shadow-sm" id="palDig">
+                      <form action="">
+                          <div class="row">
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Legnago" autocomplete="off" value="1" >
+                                <label class="btn btn-outline-secondary" for="Legnago">Legnago - Biblioteca Fioroni</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Castagnaro" autocomplete="off" value="2">
+                                <label class="btn btn-outline-secondary" for="Castagnaro">Castagnaro</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Isola_della_Scala" autocomplete="off" value="3">
+                                <label class="btn btn-outline-secondary" for="Isola_della_Scala">Isola della Scala</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Minerbe" autocomplete="off" value="4">
+                                <label class="btn btn-outline-secondary" for="Minerbe">Minerbe</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Villabartolomea" autocomplete="off" value="5">
+                                <label class="btn btn-outline-secondary" for="Villabartolomea">Villabartolomea</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Isola_Rizza" autocomplete="off" value="6">
+                                <label class="btn btn-outline-secondary" for="Isola_Rizza">Isola Rizza</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="San_Pietro_di_Morubio" autocomplete="off" value="7">
+                                <label class="btn btn-outline-secondary" for="San_Pietro_di_Morubio">San Pietro di Morubio</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Legnago2" autocomplete="off" value="8">
+                                <label class="btn btn-outline-secondary" for="Legnago2">Legnago - Biblioteca Bellinato</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Angiari" autocomplete="off" value="9">
+                                <label class="btn btn-outline-secondary" for="Angiari">Angiari</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Bovolone" autocomplete="off" value="10">
+                                <label class="btn btn-outline-secondary" for="Bovolone">Bovolone</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Cerea" autocomplete="off" value="11">
+                                <label class="btn btn-outline-secondary" for="Cerea">Cerea</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Terrazzo" autocomplete="off" value="12">
+                                <label class="btn btn-outline-secondary" for="Terrazzo">Terrazzo</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Roverchiara" autocomplete="off" value="13">
+                                <label class="btn btn-outline-secondary" for="Roverchiara">Roverchiara</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="space13legnago" autocomplete="off" value="14">
+                                <label class="btn btn-outline-secondary" for="space13legnago">Legnago - Space13</label><br>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIPO DI ATTIVITA -->
+          <div class="accordion" id="Attivita_col">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Attività
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#Attivita_col">
+                <div class="accordion-body">
+                  
+                  <div class="container rounded shadow-sm" id="attivita">
+                      <form action="">
+                          <div class="row">
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Kick_Off" autocomplete="off" value="1">
+                                <label class="btn btn-outline-secondary" for="Kick_Off">Kick Off</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Labvan" autocomplete="off" value="2">
+                                <label class="btn btn-outline-secondary" for="Labvan">Labvan</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Focus_Group" autocomplete="off" value="3">
+                                <label class="btn btn-outline-secondary" for="Focus_Group">Focus Group</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Coprogettazione" autocomplete="off" value="4">
+                                <label class="btn btn-outline-secondary" for="Coprogettazione">Coprogettazione</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Evento_Pubblico" autocomplete="off" value="5">
+                                <label class="btn btn-outline-secondary" for="Evento_Pubblico">Evento Pubblico</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Comunicazione" autocomplete="off" value="6">
+                                <label class="btn btn-outline-secondary" for="Comunicazione">Comunicazione</label><br>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEMA / ARGOMENTO -->
+          <div class="accordion" id="Temi_col">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Temi
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree" data-bs-parent="#Temi_col">
+                <div class="accordion-body">
+                  <div class="container rounded shadow-sm" id="tema">
+                      <form action="">
+                          <div class="row">
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Innovazione" autocomplete="off" value="1">
+                                <label class="btn btn-outline-secondary" for="Innovazione">Innovazione</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Open_Data" autocomplete="off" value="2">
+                                <label class="btn btn-outline-secondary" for="Open_Data">Open Data</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Agenda_Digitale" autocomplete="off" value="3">
+                                <label class="btn btn-outline-secondary" for="Agenda_Digitale">Agenda Digitale</label><br>
+                              </div>
+                              <div class="fl_left mt-2">
+                                <input type="checkbox" class="btn-check" id="Comunicazione" autocomplete="off" value="4">
+                                <label class="btn btn-outline-secondary" for="Comunicazione">Comunicazione</label><br>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ESEMPIO DI FILTRO 
+        <div class="fl_left mt-2">
+          <input type="checkbox" class="btn-check" id="ESEMPIO_1" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="ESEMPIO_1">ESEMPIO 1</label><br>
+        </div>
+      -->
+      <!-- fine filtri barra laterale -->
+
+
+
+      <!-- Inizio Lista risorse -->
+      <div class="container">
+        <div class="row">
+
+            <div id="res"></div>
+
+
+        </div>
+      </div>
+    </article>
+
+
+    <div class="footer-middle"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6  col-lg-4 ">
+            <div id="text-9" class="extendedwopts-md-center widget widget_text">      
+              <div class="textwidget">
+                <p>PROGETTO FINANZIATO</p>
+              </div>
+            </div>
+            <div id="text-5" class="extendedwopts-md-center widget widget_text">      
+              <div class="textwidget">
+                <p>
+                  <img class="aligncenter" src="./img/por_200px.png" alt="">
+                </p>
+              </div>
+            </div>                      
+          </div>
+          <div class="col-sm-12 col-md-6  col-lg-4 ">
+            <div id="text-11" class="extendedwopts-md-center widget widget_text">
+              <div class="textwidget">
+                
+              </div>
+              </div>                      
+            </div>
+            <div class="col-sm-12 col-md-6  col-lg-4 last">
+              <div id="custom_html-4" class="widget_text extendedwopts-md-center widget widget_custom_html">
+                <div class="textwidget custom-html-widget">
+                  <div class="social_logo text-center">
+                    <a href="http://www.space13.it/" target="_blank">
+                      <img id="imgSpaceFoot" src="./img/logo.png" alt="Space 13 Demo">
+                    </a>
+                  </div>
+                  <div class="footer-social-icon text-center">
+                    <a class="facebook-f social-icon" target="_blank" href="https://www.facebook.com/space13legnago" title="Facebook-f">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 50 50">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                      </svg>
+                    </a>
+                    <a class="instagram social-icon" target="_blank" href="https://www.instagram.com/space13legnago/" title="Instagram">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-instagram" viewBox="0 0 50 50">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                      </svg>
+                    </a>
+                    <a class="linkedin-in social-icon" target="_blank" href="https://www.linkedin.com/company/space13-legnago" title="Linkedin-in">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 50 50">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                      </svg>
+                    </a>
+                    <a class="youtube social-icon" target="_blank" href="https://www.youtube.com/channel/UC2bX6HWPKpjcBbeUqiZCBhw" title="Youtube">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-youtube" viewBox="0 0 50 50">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                      </svg>
+                    </a>             
+                    <p></p>
+                  </div>
+                </div>
+              </div>                     
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+  </body>
+
+  <script type="text/javascript">
+
+  </script>
+</html>
