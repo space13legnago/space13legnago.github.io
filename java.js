@@ -122,14 +122,14 @@ $(function() { // DOM ready
 
     $("#v_righe").click(function(){
       $("#res").removeClass('righe');
-      $("#v_griglia").removeClass('nonAttivo');
-      $("#v_righe").addClass('nonAttivo');
+      $("#v_griglia").addClass('nonAttivo');
+      $("#v_righe").removeClass('nonAttivo');
       find_in_object(json,array_filti);
     });
     $("#v_griglia").click(function(){
       $("#res").addClass('righe');
-      $("#v_righe").removeClass('nonAttivo');
-      $("#v_griglia").addClass('nonAttivo');
+      $("#v_righe").addClass('nonAttivo');
+      $("#v_griglia").removeClass('nonAttivo');
       find_in_object(json,array_filti);
     });
 
