@@ -31,7 +31,7 @@ Attività:
 
 
 Per aggiungere un nuovo blocco:
-- Caricare tutto il materiale su github cosi da avere i link corretti
+- Caricare tutto il materiale su github/youtube etc cosi da avere i link corretti
 - Copiare e incollare questo esempio:
    {
     "palestra": N_PAL,
@@ -57,10 +57,10 @@ Per aggiungere un nuovo blocco:
   C_LINKRISORSA = E' il link a cui vogliamo portare l'utente
   C_SCRITTABTN = E' ciò che verrà scritto all'interno del bottone
 
-  NB.0: Se ho piu di una palestra, attività o tema separare i numeri con la barra, in questo modo: "palestra": "1-2-3" vuol dire che è presente nelle palestre (1)Legnago - B.Fioroni , (2)Castagnaro e (3)Isola della Scala
+  NB.0: Se ho piu di una palestra, attività o tema separare i numeri con il trattino, in questo modo: "palestra": "1-2-3" vuol dire che è presente nelle palestre (1)Legnago - B.Fioroni , (2)Castagnaro e (3)Isola della Scala
   NB.1: BISOGNA mettere le virgolette e fare molta attenzione al resto della sintassi
-  NB.2: Prima di aggiungere un nuovo blocco contenuto  assicurarsi che ci sia la virgola prima di aprire la parentesi graffa. I blocchi sono separati tra di loro con una virgola tranne l'ultimo blocco che non avrà la virgola bensì la chiusura della parentesi quadra. 
-  NB.3: Esempio pratico: 
+  NB.2: Prima di aggiungere un nuovo blocco di contenuto  assicurarsi che ci sia la virgola prima di aprire la parentesi graffa. I blocchi sono separati tra di loro con una virgola tranne l'ultimo blocco che non avrà la virgola bensì la chiusura della parentesi quadra. 
+  NB.3: Esempio pratico di un blocco: 
     Abbiamo un evento: t2i_B1_ III_LABVAN_2021_07_20 nella sede di Legnago - B.Fioroni, l'attività è Labvan, l'argomento è innovazione e la risosrsa si trova nel nostro github al link: https://github.com/space13legnago/Innovazione/blob/main/001%20III%20LABVAN%202021%2007%2020/001_t2i_B1_%20III_LABVAN_2021_07_20.pdf
     Costruiamo il blocco assieme:
     {
