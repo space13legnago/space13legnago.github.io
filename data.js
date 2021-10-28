@@ -20,7 +20,6 @@ Temi:
   1:    Innovazione
   2:    Open Data 
   3:    Agenda Digitale
-  4:    Comunicazione
 
 Attività:
   1:    Kick Off
