@@ -427,6 +427,10 @@ input[type="checkbox"]:checked+.fas.fa-heart {
     padding: 25px;
 }
 
+.lista{
+  margin-left: 20px;
+}
+
 body .extendedwopts-md-center {
     text-align: center;
     color: white;
