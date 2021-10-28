@@ -120,13 +120,13 @@ $(function() { // DOM ready
       find_in_object(json,array_filti);
     });
 
-    $("#v_griglia").click(function(){
+    $("#v_righe").click(function(){
       $("#res").removeClass('righe');
       $("#v_griglia").removeClass('nonAttivo');
       $("#v_righe").addClass('nonAttivo');
       find_in_object(json,array_filti);
     });
-    $("#v_righe").click(function(){
+    $("#v_griglia").click(function(){
       $("#res").addClass('righe');
       $("#v_righe").removeClass('nonAttivo');
       $("#v_griglia").addClass('nonAttivo');
