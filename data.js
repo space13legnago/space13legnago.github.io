@@ -272,5 +272,17 @@ var json = [{
   "descrizioneBreve": "Qui trovi un video sul progetto Innovation Lab - Space13",
   "linkRisorsa": "https://www.youtube.com/watch?v=hMDSNTd_CPE",
   "CTA": "Vai alla risorsa"
+},
+{//013
+  "palestra": "14",
+  "attivita": "6",
+  "tema": "3",
+  "linkImg": "./img/logo_colori.png",
+  "descrizioneImg": "Logo Space13",
+  "titolo": "A Legnago è nato Space13: per costruire insieme una comunità di innovatori",
+  "descrizione": "Qui trovi un video sul progetto Innovation Lab - Space13",
+  "descrizioneBreve": "Qui trovi un video sul progetto Innovation Lab - Space13",
+  "linkRisorsa": "https://www.youtube.com/watch?v=hMDSNTd_CPE",
+  "CTA": "Vai alla risorsa"
 }
 ];
